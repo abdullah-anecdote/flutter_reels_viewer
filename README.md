@@ -86,7 +86,7 @@ FlutterReelsViewer.network(
 
 ## Properties
 
-### **```FlutterReelsViewer```**
+### **```FlutterReelsViewer(...)```**
 
 | Property | Description                                                                                                               | Default |
 |--------|---------------------------------------------------------------------------------------------------------------------------|---|
