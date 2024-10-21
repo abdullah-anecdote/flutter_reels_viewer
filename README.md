@@ -9,7 +9,7 @@ A highly customizable widget that displays multiple videos in a vertically scrol
 
 ## Preview
 
-<img src="https://raw.githubusercontent.com/devendroid/flutter_reels_viewer/master/assets/promo.gif?raw=true"/>
+![Forward](https://raw.githubusercontent.com/devendroid/flutter_reels_viewer/assets/promo.gif)
 
 ## Instalation
 
