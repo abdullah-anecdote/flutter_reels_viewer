@@ -36,13 +36,17 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.black,
-        body: FlutterReelsViewer.network(
+        body:
+        FlutterReelsViewer.network(
             height: MediaQuery.of(context).size.height,
             width: MediaQuery.of(context).size.width,
             videoSourceList: VideoRepository.videosWithPoster,
             scrollDirection: Axis.vertical,
             preloadPagesCount: 2,
-            videoBoxFit: BoxFit.cover,
+            videoBoxFit: BoxFit.fitWidth,
+            playInLoop: true,
+            showControlsOverlay: true,
+            showVideoProgressIndicator: true,
             onPageChanged: (videoPlayerController, index) {},
             getCurrentVideoController: (videoPlayerController) {},
             overlayBuilder: (context, index) => VideoOverlay(index))

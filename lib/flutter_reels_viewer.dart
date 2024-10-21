@@ -37,8 +37,8 @@ class FlutterReelsViewer extends StatefulWidget {
   bool showControlsOverlay;
   bool showVideoProgressIndicator;
 
-  /// To enable the play in loops,
-  /// Note:- This cant be disable if showControlsOverlay property is disable
+  /// To play videos in a continuous loop.
+  /// Note: This feature cannot be disabled if the showControlsOverlay property is turned off.
   bool playInLoop;
 
   double height;

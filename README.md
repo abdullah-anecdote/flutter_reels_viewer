@@ -30,30 +30,77 @@ $ flutter pub get
 
 ## How to use
 
-Simple example for the usage of the package is shown below.
+#### Video list can contain either only videos.
+
+```dart
+List<dynamic> videos = [
+  'https://assets.mixkit.co/videos/39767/39767-720.mp4',
+  'https://assets.mixkit.co/videos/34487/34487-720.mp4',
+  'https://assets.mixkit.co/videos/34404/34404-720.mp4'
+];
+```
+#### Or videos with poster image.
+
+```dart
+List<dynamic> videos = [
+  {
+    'video': 'https://assets.mixkit.co/videos/39767/39767-720.mp4',
+    'image': 'https://assets.mixkit.co/videos/39767/39767-thumb-360-0.jpg'
+  },
+  {
+    'video': 'https://assets.mixkit.co/videos/34487/34487-720.mp4',
+    'image': 'https://assets.mixkit.co/videos/34487/34487-thumb-360-0.jpg'
+  },
+  {
+    'video': 'https://assets.mixkit.co/videos/34404/34404-720.mp4',
+    'image': 'https://assets.mixkit.co/videos/34404/34404-thumb-360-0.jpg'
+  },
+];
+```
+
+#### Then simple example
 
 ```dart
 FlutterReelsViewer.network(
     height: MediaQuery.of(context).size.height,
     width: MediaQuery.of(context).size.width,
-    videoSourceList: VideoRepository.videos,
+    videoSourceList: VideoRepository.videosWithPoster,
+    scrollDirection: Axis.vertical,
     preloadPagesCount: 2,
-    videoBoxFit: BoxFit.fitWidth,
+    videoBoxFit: BoxFit.cover,
+    playInLoop: true,
+    showControlsOverlay: true,
+    showVideoProgressIndicator: true,
     onPageChanged: (videoPlayerController, index) {},
     getCurrentVideoController: (videoPlayerController) {},
-),
+    overlayBuilder: (context, index) => VideoOverlay(index)
+);
 ```
+## Variant
+
+| Variant                        | Description                                  |
+|--------------------------------|----------------------------------------------|
+| FlutterReelsViewer.network(...) | Plays videos from list of network video urls |
+| FlutterReelsViewer.asset(...)  | Plays videos from list of asset videos       |
+| FlutterReelsViewer.file(...)   | Plays videos from list of video files        |
+
 ## Properties
 
 ### **```FlutterReelsViewer```**
 
-| Property |Description| Default |
-| --- | ---- | --- |
-| icon | Set icon for the FAB | Icons.add |
-| color | Set color for the FAB | Colors.blue |
-| fabSize | Set size for the FAB | 56 |
-| fabMargin | Give margin for the FAB | 0 |
-| fabElevation | Set elevation for the FAB | 4 |
-| actionButtonSize | Set size for the Action Buttons | 48 |
-| actionButtonElevation | Set elevation for the Action Buttons | 4 |
-| controller | Set controller to controll programatically |  |
+| Property | Description                                                                                                               | Default |
+|--------|---------------------------------------------------------------------------------------------------------------------------|---|
+| height | Set height for Widget   |   |
+| width  | Set width for Widget  |   |
+| videoSourceList | List or dynamic video sources     |   |
+| scrollDirection | Scroll direction of preload page view  | Axis.vertical |
+| preloadPagesCount | Number of videos getting initialized defined by preloadPagesCount | 1 |
+| videoBoxFit | Set video scaling mode  | BoxFit.fitWidth |
+| playInLoop | To play videos in a continuous loop. Note: This feature cannot be disabled if the showControlsOverlay property is turned off. | true |
+| showControlsOverlay | Enable play/pause controls on tap of the video  | true |
+| showVideoProgressIndicator | Show progress indicator at bottom of the video  | true |
+| onPageChanged | Listen to page change with current index  |   |
+| getCurrentVideoController | Get current playing video contoller  |   |
+| overlayBuilder | Design your own widget that will show as a overlay on the video  |   |
+
+
