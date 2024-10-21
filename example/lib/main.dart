@@ -43,7 +43,7 @@ class _MyHomePageState extends State<MyHomePage> {
             videoSourceList: VideoRepository.videosWithPoster,
             scrollDirection: Axis.vertical,
             preloadPagesCount: 2,
-            videoBoxFit: BoxFit.fitWidth,
+            videoBoxFit: BoxFit.cover,
             playInLoop: true,
             showControlsOverlay: true,
             showVideoProgressIndicator: true,

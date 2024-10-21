@@ -9,7 +9,7 @@ A highly customizable widget that displays multiple videos in a vertically scrol
 
 ## Preview
 
-<img src="https://raw.githubusercontent.com/devendroid/flutter_reels_viewer/master/assets/efab-preview.gif?raw=true" width="320px"/>
+<img src="https://raw.githubusercontent.com/devendroid/flutter_reels_viewer/master/assets/promo.gif?raw=true"/>
 
 ## Instalation
 
@@ -64,7 +64,7 @@ List<dynamic> videos = [
 FlutterReelsViewer.network(
     height: MediaQuery.of(context).size.height,
     width: MediaQuery.of(context).size.width,
-    videoSourceList: VideoRepository.videosWithPoster,
+    videoSourceList: videos,
     scrollDirection: Axis.vertical,
     preloadPagesCount: 2,
     videoBoxFit: BoxFit.cover,

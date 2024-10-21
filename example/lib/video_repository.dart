@@ -8,6 +8,10 @@ class VideoRepository {
     'https://assets.mixkit.co/videos/42313/42313-720.mp4',
     'https://assets.mixkit.co/videos/43392/43392-720.mp4',
     'https://assets.mixkit.co/videos/43648/43648-720.mp4',
+    'https://assets.mixkit.co/videos/49911/49911-720.mp4',
+    'https://assets.mixkit.co/videos/40068/40068-720.mp4',
+    'https://assets.mixkit.co/videos/43785/43785-720.mp4',
+    'https://assets.mixkit.co/videos/40159/40159-720.mp4'
   ];
 
   static List<dynamic> videosWithPoster = [
@@ -42,6 +46,22 @@ class VideoRepository {
     {
       'video': 'https://assets.mixkit.co/videos/43648/43648-720.mp4',
       'image': 'https://assets.mixkit.co/videos/43648/43648-thumb-360-0.jpg'
+    },
+    {
+      'video': 'https://assets.mixkit.co/videos/49911/49911-720.mp4',
+      'image': 'https://assets.mixkit.co/videos/49911/49911-thumb-360-0.jpg'
+    },
+    {
+      'video': 'https://assets.mixkit.co/videos/40068/40068-720.mp4',
+      'image': 'https://assets.mixkit.co/videos/40068/40068-thumb-360-0.jpg'
+    },
+    {
+      'video': 'https://assets.mixkit.co/videos/43785/43785-720.mp4',
+      'image': 'https://assets.mixkit.co/videos/43785/43785-thumb-360-0.jpg'
+    },
+    {
+      'video': 'https://assets.mixkit.co/videos/40159/40159-720.mp4',
+      'image': 'https://assets.mixkit.co/videos/40159/40159-thumb-360-0.jpg'
     }
   ];
 }
