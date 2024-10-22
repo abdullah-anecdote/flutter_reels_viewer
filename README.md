@@ -10,6 +10,8 @@ A highly customizable widget that displays multiple videos in a vertically scrol
 ## Preview
 
 ![prev1](https://github.com/devendroid/flutter_reels_viewer/blob/main/assets/prev1.gif)
+![prev2](https://github.com/devendroid/flutter_reels_viewer/blob/main/assets/prev2.gif)
+![prev3](https://github.com/devendroid/flutter_reels_viewer/blob/main/assets/prev3.gif)
 
 ## Instalation
 
@@ -42,7 +44,7 @@ List<dynamic> videos = [
 #### Or videos with poster image.
 
 ```dart
-List<dynamic> videos = [
+List<dynamic> videosWithImage = [
   {
     'video': 'https://assets.mixkit.co/videos/39767/39767-720.mp4',
     'image': 'https://assets.mixkit.co/videos/39767/39767-thumb-360-0.jpg'
@@ -64,7 +66,7 @@ List<dynamic> videos = [
 FlutterReelsViewer.network(
     height: MediaQuery.of(context).size.height,
     width: MediaQuery.of(context).size.width,
-    videoSourceList: videos,
+    videoSourceList: videos, // OR videosWithImage
     scrollDirection: Axis.vertical,
     preloadPagesCount: 2,
     videoBoxFit: BoxFit.cover,
@@ -88,19 +90,35 @@ FlutterReelsViewer.network(
 
 ### **```FlutterReelsViewer(...)```**
 
-| Property | Description                                                                                                               | Default |
-|--------|---------------------------------------------------------------------------------------------------------------------------|---|
-| height | Set height for Widget   |   |
-| width  | Set width for Widget  |   |
-| videoSourceList | List or dynamic video sources     |   |
-| scrollDirection | Scroll direction of preload page view  | Axis.vertical |
-| preloadPagesCount | Number of videos getting initialized defined by preloadPagesCount | 1 |
-| videoBoxFit | Set video scaling mode  | BoxFit.fitWidth |
-| playInLoop | To play videos in a continuous loop. Note: This feature cannot be disabled if the showControlsOverlay property is turned off. | true |
-| showControlsOverlay | Enable play/pause controls on tap of the video  | true |
-| showVideoProgressIndicator | Show progress indicator at bottom of the video  | true |
-| onPageChanged | Listen to page change with current index  |   |
-| getCurrentVideoController | Get current playing video contoller  |   |
-| overlayBuilder | Design your own widget that will show as a overlay on the video  |   |
+| Type                                 | Property | Description                                                                                                               | Default |
+|--------------------------------------|--------|---------------------------------------------------------------------------------------------------------------------------|---|
+| *double*                             | height | Set height for Widget   |   |
+| *double*                             | width  | Set width for Widget  |   |
+| *List< dynamic >*                    | videoSourceList | List or dynamic video sources     |   |
+| [*Axis*][axis]                       | scrollDirection | Scroll direction of preload page view  | Axis.vertical |
+| *int*                                | preloadPagesCount | Number of videos getting initialized defined by preloadPagesCount | 1 |
+| [*ScrollPhysics*][scroll]            | scrollPhysics | How the page view should respond to user input | Platform conventions |
+| *bool*                               | pageSnapping | Set to false to disable page snapping | true |
+| *bool*                               | reverse | Whether the page view scrolls in the reading direction | false |
+| [*PreloadPageController*][preload]   | pageController | To get more control on PreloadPageView |  |
+| [*BoxFit*][box]                      | videoBoxFit | Set video scaling mode  | BoxFit.fitWidth |
+| *bool*                               | playInLoop | To play videos in a continuous loop. Note: This feature cannot be disabled if the showControlsOverlay property is turned off. | true |
+| [*VideoPlayerOptions*][player]       | videoPlayerOptions | Provide additional configuration options (optional). Like setting the audio mode to mix  |  |
+| *Future< [ClosedCaptionFile][ccf] >* | closedCaptionFile | Optional field to specify a file containing the closed captioning |  |
+| *Map< String, String >*              | httpHeaders | HTTP headers can be used only for [VideoPlayerController.network]  |  |
+| [*VideoFormat*][format]              | formatHint | **Android only**. Will override the platform's generic file format  | true |
+| *String*                             | package | Only set for [asset] videos. The package that the asset was loaded from  | true |
+| *bool*                               | showControlsOverlay | Enable play/pause controls on tap of the video  | true |
+| *bool*                               | showVideoProgressIndicator | Show progress indicator at bottom of the video  | true |
+| *Functoin(controller, index)*        | onPageChanged | Listen to page change with current index  |   |
+| *Function(controller)*               | getCurrentVideoController | Get current playing video contoller  |   |
+| *Function(context, index)*           | overlayBuilder | Design your own widget that will show as a overlay on the video  |   |
 
 
+[axis]:https://api.flutter.dev/flutter/painting/Axis.html
+[scroll]:https://api.flutter.dev/flutter/widgets/ScrollPhysics-class.html
+[preload]:https://pub.dev/documentation/preload_page_view/latest/preload_page_view/PreloadPageController-class.html
+[box]:https://api.flutter.dev/flutter/painting/BoxFit.html
+[player]:https://pub.dev/documentation/video_player_platform_interface/latest/video_player_platform_interface/VideoPlayerOptions-class.html
+[ccf]:https://pub.dev/documentation/video_player/latest/video_player/ClosedCaptionFile-class.html
+[format]:https://pub.dev/documentation/video_player/latest/video_player/VideoFormat.html
