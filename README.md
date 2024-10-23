@@ -13,6 +13,11 @@ A highly customizable widget that displays multiple videos in a vertically scrol
 ![prev2](https://github.com/devendroid/flutter_reels_viewer/blob/main/assets/prev2.gif)
 ![prev3](https://github.com/devendroid/flutter_reels_viewer/blob/main/assets/prev3.gif)
 
+## Demo APK
+
+[Click here](https://github.com/devendroid/flutter_reels_viewer/blob/master/assets/reels_viewer.apk) for download demo app.
+
+
 ## Instalation
 
 * Add the latest version of the package to your pubspec.yaml file in the dependency section.
