@@ -49,16 +49,16 @@ class _MyHomePageState extends State<MyHomePage> {
             showVideoProgressIndicator: true,
             onPageChanged: (videoPlayerController, index) {},
             getCurrentVideoController: (videoPlayerController) {},
-            overlayBuilder: (context, index) => VideoOverlay(index))
+            overlayBuilder: (context, index) => MyCustomVideoOverlay(index))
         // This trailing comma makes auto-formatting nicer for build methods.
         );
   }
 }
 
-class VideoOverlay extends StatelessWidget {
+class MyCustomVideoOverlay extends StatelessWidget {
   final int index;
 
-  const VideoOverlay(this.index, {super.key});
+  const MyCustomVideoOverlay(this.index, {super.key});
 
   @override
   Widget build(BuildContext context) {

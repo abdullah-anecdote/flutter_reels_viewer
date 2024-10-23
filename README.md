@@ -75,7 +75,7 @@ FlutterReelsViewer.network(
     showVideoProgressIndicator: true,
     onPageChanged: (videoPlayerController, index) {},
     getCurrentVideoController: (videoPlayerController) {},
-    overlayBuilder: (context, index) => VideoOverlay(index)
+    overlayBuilder: (context, index) => MyCustomVideoOverlay(index)
 );
 ```
 ## Variant
