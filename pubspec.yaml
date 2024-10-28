@@ -1,7 +1,7 @@
 name: flutter_reels_viewer
-description: "A new Flutter plugin project."
+description: "A highly customizable widget that displays multiple videos in a vertically scrollable list, providing a smooth scrolling experience while watching short videos, similar to platforms like Facebook, Instagram, and YouTube"
 version: 1.0.0
-homepage:
+homepage: https://github.com/devendroid/flutter_reels_viewer
 
 environment:
   sdk: ^3.5.1

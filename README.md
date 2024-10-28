@@ -5,7 +5,7 @@
 ![](https://badges.fyi/github/stars/devendroid/flutter_reels_viewer)
 ![](https://badges.fyi/github/license/devendroid/flutter_reels_viewer)
 
-A highly customizable widget that displays multiple videos in a vertically scrollable list, providing a smooth scrolling experience while watching short videos, similar to platforms like Facebook, Instagram, and YouTube..
+A highly customizable widget that displays multiple videos in a vertically scrollable list, providing a smooth scrolling experience while watching short videos, similar to platforms like Facebook, Instagram, and YouTube.
 
 ## Preview
 
