@@ -3,7 +3,7 @@
 [![pub](https://img.shields.io/pub/v/flutter_reels_viewer?logo=dart)](https://pub.dev/packages/flutter_reels_viewer)
 ![](https://badges.fyi/github/latest-tag/devendroid/flutter_reels_viewer)
 ![](https://badges.fyi/github/stars/devendroid/flutter_reels_viewer)
-![](https://badges.fyi/github/license/devendroid/flutter_reels_viewer)
+[![Licence](https://img.shields.io/github/license/devendroid/flutter_reels_viewer?style=flat-square&color=f12253)](https://badges.fyi/github/license/devendroid/flutter_reels_viewer)
 
 A highly customizable widget that displays multiple videos in a vertically scrollable list, providing a smooth scrolling experience while watching short videos, similar to platforms like Facebook, Instagram, and YouTube.
 
