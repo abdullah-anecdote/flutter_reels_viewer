@@ -11,7 +11,10 @@ dependencies:
   flutter:
     sdk: flutter
 
-  cached_video_player: ^2.0.4
+  cached_video_player:
+    git:
+      url: https://github.com/vikram25897/flutter_cached_video_player
+      ref: master
   preload_page_view: ^0.2.0
   cached_network_image: ^3.4.1
 

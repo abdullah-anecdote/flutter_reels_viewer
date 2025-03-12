@@ -47,7 +47,7 @@ dependency_overrides:
   cached_video_player:
     git:
       url: https://github.com/vikram25897/flutter_cached_video_player
-      ref: feature/gradle_version_bump
+      ref: master
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
