@@ -1,6 +1,6 @@
 library flutter_reels_viewer;
 
-import 'package:cached_video_player/cached_video_player.dart';
+import 'package:cached_video_player_plus/cached_video_player_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:preload_page_view/preload_page_view.dart';
 
@@ -46,12 +46,12 @@ class FlutterReelsViewer extends StatefulWidget {
   BoxFit videoBoxFit;
 
   /// getCurrentVideoController return the current playing video controller
-  Function(CachedVideoPlayerController? videoPlayerController)?
+  Function(CachedVideoPlayerPlusController? videoPlayerController)?
       getCurrentVideoController;
 
   /// onPageChanged calls when swiping through the pages, return
   /// current playing video controller and index
-  Function(CachedVideoPlayerController? videoPlayerController, int index)?
+  Function(CachedVideoPlayerPlusController? videoPlayerController, int index)?
       onPageChanged;
   ScrollPhysics? scrollPhysics;
   bool reverse;
@@ -195,7 +195,7 @@ class _FlutterReelsViewerState extends State<FlutterReelsViewer> {
       showControlsOverlay: widget.showControlsOverlay,
       showVideoProgressIndicator: widget.showVideoProgressIndicator,
       playInLoop: widget.playInLoop,
-      onInit: (CachedVideoPlayerController videoPlayerController) {
+      onInit: (CachedVideoPlayerPlusController videoPlayerController) {
         if (index == ReelModal.currentIndex) {
           widget.getCurrentVideoController?.call(videoPlayerController);
         }

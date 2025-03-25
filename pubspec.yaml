@@ -1,6 +1,6 @@
 name: flutter_reels_viewer
 description: "A customizable widget for smooth vertical scrolling of short videos, like IG."
-version: 1.0.0
+version: 1.1.0
 homepage: https://github.com/devendroid/flutter_reels_viewer
 
 environment:
@@ -11,10 +11,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  cached_video_player:
-    git:
-      url: https://github.com/abdullah-anecdote/flutter_cached_video_player
-      ref: master
+  cached_video_player_plus: ^3.0.3
   preload_page_view: ^0.2.0
   cached_network_image: ^3.4.1
 

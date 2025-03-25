@@ -1,4 +1,4 @@
-import 'package:cached_video_player/cached_video_player.dart';
+import 'package:cached_video_player_plus/cached_video_player_plus.dart';
 
 enum VideoSource { network, file, asset }
 
@@ -16,7 +16,7 @@ class ReelModal {
   int index;
 
   /// video player controller
-  CachedVideoPlayerController? videoPlayerController;
+  CachedVideoPlayerPlusController? videoPlayerController;
 
   /// creates a video model
   /// [videoSource] must not be null

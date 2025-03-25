@@ -1,5 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:cached_video_player/cached_video_player.dart';
+import 'package:cached_video_player_plus/cached_video_player_plus.dart';
 import 'package:flutter/material.dart';
 
 import 'flutter_reels_viewer.dart';
@@ -13,7 +13,7 @@ class ReelViewItem extends StatefulWidget {
   String? videoPosterImage;
   BoxFit videoBoxFit;
   int index;
-  Function(CachedVideoPlayerController controller) onInit;
+  Function(CachedVideoPlayerPlusController controller) onInit;
   Function(int index) onDispose;
   VideoPlayerOptions? videoPlayerOptions;
   VideoSource sourceType;
@@ -51,7 +51,7 @@ class ReelViewItem extends StatefulWidget {
 }
 
 class _ReelViewItemState extends State<ReelViewItem> {
-  late CachedVideoPlayerController _controller;
+  late CachedVideoPlayerPlusController _controller;
   bool isLoading = true;
 
   @override
@@ -63,22 +63,22 @@ class _ReelViewItemState extends State<ReelViewItem> {
   /// initializes videos
   void _initializeVideo() {
     if (widget.sourceType == VideoSource.network) {
-      _controller = CachedVideoPlayerController.network(
-        widget.videoSource.toString(),
+      _controller = CachedVideoPlayerPlusController.networkUrl(
+        Uri.parse(widget.videoSource.toString()),
         videoPlayerOptions: widget.videoPlayerOptions,
         closedCaptionFile: widget.closedCaptionFile,
         httpHeaders: widget.httpHeaders ?? {},
         formatHint: widget.formatHint,
       );
     } else if (widget.sourceType == VideoSource.asset) {
-      _controller = CachedVideoPlayerController.asset(
+      _controller = CachedVideoPlayerPlusController.asset(
         widget.videoSource,
         videoPlayerOptions: widget.videoPlayerOptions,
         closedCaptionFile: widget.closedCaptionFile,
         package: widget.package,
       );
     } else if (widget.sourceType == VideoSource.file) {
-      _controller = CachedVideoPlayerController.file(
+      _controller = CachedVideoPlayerPlusController.file(
         widget.videoSource,
         videoPlayerOptions: widget.videoPlayerOptions,
         closedCaptionFile: widget.closedCaptionFile,
@@ -113,7 +113,7 @@ class _ReelViewItemState extends State<ReelViewItem> {
                         child: SizedBox(
                           width: _controller.value.size.width,
                           height: _controller.value.size.height,
-                          child: CachedVideoPlayer(
+                          child: CachedVideoPlayerPlus(
                             _controller,
                           ),
                         ),
@@ -185,7 +185,7 @@ class _PosterOrLoader extends StatelessWidget {
 class _ControlsOverlay extends StatefulWidget {
   const _ControlsOverlay({required this.controller});
 
-  final CachedVideoPlayerController controller;
+  final CachedVideoPlayerPlusController controller;
 
   @override
   State<_ControlsOverlay> createState() => _ControlsOverlayState();

@@ -1,11 +1,13 @@
 # This is a generated file; do not edit or check into version control.
-cached_video_player=C:\\Users\\BoOodY.DESKTOP-QF59TU1\\AppData\\Local\\Pub\\Cache\\git\\flutter_cached_video_player-cc510bf121ec4027006da338c428762fc7777dfd\\
-path_provider=C:\\Users\\BoOodY.DESKTOP-QF59TU1\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\path_provider-2.1.5\\
-path_provider_android=C:\\Users\\BoOodY.DESKTOP-QF59TU1\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\path_provider_android-2.2.15\\
-path_provider_foundation=C:\\Users\\BoOodY.DESKTOP-QF59TU1\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\path_provider_foundation-2.4.1\\
-path_provider_linux=C:\\Users\\BoOodY.DESKTOP-QF59TU1\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\path_provider_linux-2.2.1\\
-path_provider_windows=C:\\Users\\BoOodY.DESKTOP-QF59TU1\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\path_provider_windows-2.3.0\\
-sqflite=C:\\Users\\BoOodY.DESKTOP-QF59TU1\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\sqflite-2.4.1\\
-sqflite_android=C:\\Users\\BoOodY.DESKTOP-QF59TU1\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\sqflite_android-2.4.0\\
-sqflite_darwin=C:\\Users\\BoOodY.DESKTOP-QF59TU1\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\sqflite_darwin-2.4.1+1\\
-video_player_web=C:\\Users\\BoOodY.DESKTOP-QF59TU1\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\video_player_web-2.0.15\\
+cached_video_player_plus=/home/abdullah/.pub-cache/hosted/pub.dev/cached_video_player_plus-3.0.3/
+path_provider=/home/abdullah/.pub-cache/hosted/pub.dev/path_provider-2.1.5/
+path_provider_android=/home/abdullah/.pub-cache/hosted/pub.dev/path_provider_android-2.2.15/
+path_provider_foundation=/home/abdullah/.pub-cache/hosted/pub.dev/path_provider_foundation-2.4.1/
+path_provider_linux=/home/abdullah/.pub-cache/hosted/pub.dev/path_provider_linux-2.2.1/
+path_provider_windows=/home/abdullah/.pub-cache/hosted/pub.dev/path_provider_windows-2.3.0/
+sqflite=/home/abdullah/.pub-cache/hosted/pub.dev/sqflite-2.4.1/
+sqflite_android=/home/abdullah/.pub-cache/hosted/pub.dev/sqflite_android-2.4.0/
+sqflite_darwin=/home/abdullah/.pub-cache/hosted/pub.dev/sqflite_darwin-2.4.1+1/
+video_player_android=/home/abdullah/.pub-cache/hosted/pub.dev/video_player_android-2.7.16/
+video_player_avfoundation=/home/abdullah/.pub-cache/hosted/pub.dev/video_player_avfoundation-2.7.0/
+video_player_web=/home/abdullah/.pub-cache/hosted/pub.dev/video_player_web-2.3.4/
